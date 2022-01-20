@@ -6,7 +6,7 @@ function App() {
   const [dark , setDark] = useState(false)
 
  const handleDarkMode = () => {
-  setDark(true)
+  setDark(document.querySelector('.light') )
  }
   
 
@@ -18,7 +18,7 @@ function App() {
     <div className={appClass}>
       <header>
         <h2>Shopster</h2>
-        <button onClick={handleDarkMode}>Dark Mode</button>
+        <button onClick={handleDarkMode} >Dark Mode</button>
       </header>
       <ShoppingList items={itemData} />
     </div>

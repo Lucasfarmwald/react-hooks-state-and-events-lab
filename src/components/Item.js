@@ -9,16 +9,14 @@ function Item({ name, category }) {
 const [cart , addCart] = useState('add')
 
 function handleAdd(){
-  addCart("in-cart")
+  addCart("in-cart" )
 }
-
-  
-
+ 
   return (
-    <li className="">
+    <li className={cart} >
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add" onClick={handleAdd} >{cart}</button>
+      <button className="add" onClick={handleAdd}>{cart}</button>
     </li>
   );
 }
