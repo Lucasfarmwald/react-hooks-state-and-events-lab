@@ -6,19 +6,19 @@ import React, {useState} from "react";
 function Item({ name, category }) {
 
   
-const [cart , setCart] = useState("")
+const [cart , addCart] = useState('add')
 
+function handleAdd(){
+  addCart("in-cart")
+}
 
-  const handleAdd = () =>{
-    setCart()
-  }
-
+  
 
   return (
     <li className="">
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add" onClick={handleAdd} >Add to Cart</button>
+      <button className="add" onClick={handleAdd} >{cart}</button>
     </li>
   );
 }
