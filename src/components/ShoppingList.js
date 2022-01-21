@@ -1,11 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
+  const [selectedCategory, setSelectedCategory] = useState('')
+
+  function renderValue(){
+    setSelectedCategory()
+  }
+
+
+
+
   return (
     <div className="ShoppingList">
       <div className="Filter">
-        <select name="filter">
+        <select name="filter" onClick={renderValue}>
           <option value="All">Filter by category</option>
           <option value="Produce">Produce</option>
           <option value="Dairy">Dairy</option>
