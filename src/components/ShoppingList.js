@@ -2,14 +2,12 @@ import React,{useState} from "react";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
-  const [selectedCategory, setSelectedCategory] = useState('filter')
+  const [selectedCategory, setSelectedCategory] = useState(items)
 
   function renderValue(){
-    setSelectedCategory()
+    setSelectedCategory(selectedCategory.filter(item => item.category === ))
   }
-
-
-
+  
 
   return (
     <div className="ShoppingList">
