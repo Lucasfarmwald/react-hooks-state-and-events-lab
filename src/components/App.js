@@ -4,18 +4,18 @@ import itemData from "../data/items";
 
 
 function App() {
-  const [dark , setDark] = useState(true)
+  const [dark , setDark] = useState(false)
   
 
   
 
  function handleDarkMode() {
-  setDark(!dark)
+  setDark((dark) => !dark)
  }
   
   // replace 'false' with a state variable that can be toggled between true and false
   // this will be used for the Dark Mode Toggle feature
-  const appClass = !dark ? "App dark" : "App light"
+  const appClass = dark ? "App dark" : "App light"
 
   return (
     
