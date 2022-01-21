@@ -22,7 +22,7 @@ function App() {
      <div className={appClass}>
        <header>
          <h2>Shopster</h2>
-        <button onClick={handleDarkMode} >dark mode</button>
+        <button onClick={handleDarkMode} >{dark ? "Light" : "Dark"} Mode</button>
        </header>
        <ShoppingList items={itemData} />
      </div>
